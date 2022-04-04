@@ -174,7 +174,7 @@ loadUser = (data) => {
     .then(response => {
       console.log('hi', response)
       if (response) {
-        fetch('https://sheltered-river-39504.herokuapp.com/image', {
+        fetch('https://sheltered-river-39504.herokuapp.com/imageurl', {
           mode: "cors",
           method: 'put',
           headers: {
