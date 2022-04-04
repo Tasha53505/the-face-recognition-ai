@@ -34,10 +34,6 @@ const particleOptions = {
       push: {
         quantity: 4,
       },
-      repulse: {
-        distance: 200,
-        duration: 1,
-      },
     },
   },
   particles: {
@@ -59,7 +55,7 @@ const particleOptions = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 3.5,
+      speed: 1.5,
       straight: false,
     },
     number: {
@@ -67,7 +63,7 @@ const particleOptions = {
         enable: true,
         area: 800,
       },
-      value: 80,
+      value: 20,
     },
     opacity: {
       value: 0.5,
