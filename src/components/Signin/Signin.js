@@ -16,7 +16,7 @@ class Signin extends React.Component {
     onPasswordChange = (e) => {
         this.setState({signInPassword: e.target.value})
     }
-    // test
+ 
     onSubmitSignIn = () => {
         fetch('https://sheltered-river-39504.herokuapp.com/signin', {
             method: 'post',
@@ -27,8 +27,8 @@ class Signin extends React.Component {
             })
         })
         .then(response => response.json())
-        .then(data => {
-            if(data === 'Success'){ // does the user exist? Did we receive a user with a property of id?
+        .then(user => {
+            if(user.id){ // does the user exist? Did we receive a user with a property of id?
                 this.props.loadUser(user);
                 this.props.onRouteChange('home');
               }
