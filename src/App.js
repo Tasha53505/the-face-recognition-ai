@@ -159,8 +159,13 @@ loadUser = (data) => {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input })
     fetch('https://sheltered-river-39504.herokuapp.com/imageurl', {
+      mode: "cors",
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        "Access-Control-Allow-Origin": 
+        "https://sheltered-river-39504.herokuapp.com/imageurl",
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         input: this.state.input
       })
@@ -170,8 +175,12 @@ loadUser = (data) => {
       console.log('hi', response)
       if (response) {
         fetch('https://sheltered-river-39504.herokuapp.com/image', {
+          mode: "cors",
           method: 'put',
-          headers: {'Content-Type': 'application/json'},
+          headers: {
+            "Access-Control-Allow-Origin": 
+            "https://sheltered-river-39504.herokuapp.com/imageurl",
+            'Content-Type': 'application/json'},
           body: JSON.stringify({
             id: this.state.user.id
           })
