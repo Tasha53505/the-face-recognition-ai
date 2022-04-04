@@ -15,18 +15,18 @@ const particleOptions = {
   interactivity: {
     events: {
       onClick: {
-        enable: true,
+        enable: false,
         mode: "push",
       },
       onHover: {
-        enable: true,
+        enable: false,
         mode: "repulse",
       },
       resize: true,
     },
     modes: {
       bubble: {
-        distance: 400,
+        distance: 100,
         duration: 2,
         opacity: 0.8,
         size: 40,
