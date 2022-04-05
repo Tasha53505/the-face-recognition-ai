@@ -172,9 +172,9 @@ loadUser = (data) => {
     })
     .then(response => response.json())
     .then(response => {
-      console.log('hi', response)
+      console.log('There is a problem:', response)
       if (response) {
-        fetch('https://sheltered-river-39504.herokuapp.com/imageurl', {
+        fetch('https://sheltered-river-39504.herokuapp.com/image', {
           mode: "cors",
           method: 'put',
           headers: {
@@ -238,7 +238,7 @@ loadUser = (data) => {
 export default App;
 
 
-// Image address:  https://content.latest-hairstyles.com/wp-content/uploads/hairstyles-for-oval-faces.jpg
+// Image address tester:  https://content.latest-hairstyles.com/wp-content/uploads/hairstyles-for-oval-faces.jpg
 
 
 
