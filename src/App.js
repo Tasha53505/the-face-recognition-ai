@@ -163,7 +163,7 @@ loadUser = (data) => {
       method: 'post',
       headers: {
         "Access-Control-Allow-Origin": 
-        "https://sheltered-river-39504.herokuapp.com/imageurl",
+        "*",
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -172,14 +172,14 @@ loadUser = (data) => {
     })
     .then(response => response.json())
     .then(response => {
-      console.log('There is a problem:', response)
+      console.log('There is (no) problem:', response)
       if (response) {
         fetch('https://sheltered-river-39504.herokuapp.com/image', {
           mode: "cors",
           method: 'put',
           headers: {
             "Access-Control-Allow-Origin": 
-            "https://sheltered-river-39504.herokuapp.com/imageurl",
+            "*",
             'Content-Type': 'application/json'},
           body: JSON.stringify({
             id: this.state.user.id
