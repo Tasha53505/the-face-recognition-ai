@@ -18,9 +18,13 @@ class Signin extends React.Component {
     }
  
     onSubmitSignIn = () => {
-        fetch('localhost:3000/signin', {
+        fetch('https://sheltered-river-39504.herokuapp.com/signin', {
             method: 'post',
-            headers: {'Content-Type': 'application/json' },
+            mode: "cors",
+            headers: {
+                "Access-Control-Allow-Origin": 
+                "https://sheltered-river-39504.herokuapp.com/signin",
+                'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: this.state.signInEmail,
                 password: this.state.signInPassword
