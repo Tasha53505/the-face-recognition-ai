@@ -10,7 +10,6 @@ import './App.css';
 import Particles from 'react-tsparticles';
 
 
-
 const particleOptions = {
   fpsLimit: 60,
   interactivity: {
@@ -160,11 +159,11 @@ loadUser = (data) => {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input })
     fetch('https://sheltered-river-39504.herokuapp.com/imageurl', {
-      mode: "cors",
+      mode: "no-cors",
       method: 'post',
       headers: {
         "Access-Control-Allow-Origin": 
-        "*",
+        "https://sheltered-river-39504.herokuapp.com/imageurl",
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -176,11 +175,11 @@ loadUser = (data) => {
       console.log('There is a problem:', response)
       if (response) {
         fetch('https://sheltered-river-39504.herokuapp.com/image', {
-          mode: "cors",
+          mode: "no-cors",
           method: 'put',
           headers: {
             "Access-Control-Allow-Origin": 
-            "*",
+            "https://sheltered-river-39504.herokuapp.com/imageurl",
             'Content-Type': 'application/json'},
           body: JSON.stringify({
             id: this.state.user.id

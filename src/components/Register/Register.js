@@ -27,10 +27,10 @@ class Register extends React.Component   {
     onSubmitSignIn = () => {
         fetch('https://sheltered-river-39504.herokuapp.com/register', {
             method: 'post',
-            mode: 'cors',
+            mode: 'no-cors',
             headers : { 
                 "Access-Control-Allow-Origin": 
-                "*",
+                "https://sheltered-river-39504.herokuapp.com/register",
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
                },
