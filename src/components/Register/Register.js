@@ -30,7 +30,7 @@ class Register extends React.Component   {
             mode: 'cors',
             headers : { 
                 "Access-Control-Allow-Origin": 
-                "*",
+                "no-cors",
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
                },

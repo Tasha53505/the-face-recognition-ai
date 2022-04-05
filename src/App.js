@@ -163,7 +163,7 @@ loadUser = (data) => {
       method: 'post',
       headers: {
         "Access-Control-Allow-Origin": 
-        "*",
+        "no-cors",
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -179,7 +179,7 @@ loadUser = (data) => {
           method: 'put',
           headers: {
             "Access-Control-Allow-Origin": 
-            "*",
+            "no-cors",
             'Content-Type': 'application/json'},
           body: JSON.stringify({
             id: this.state.user.id

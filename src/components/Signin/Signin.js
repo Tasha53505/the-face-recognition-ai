@@ -23,7 +23,7 @@ class Signin extends React.Component {
             mode: "cors",
             headers: {
                 "Access-Control-Allow-Origin": 
-                "*",
+                "no-cors",
                 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: this.state.signInEmail,
