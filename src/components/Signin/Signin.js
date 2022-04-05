@@ -20,7 +20,7 @@ class Signin extends React.Component {
     onSubmitSignIn = () => {
         fetch('https://sheltered-river-39504.herokuapp.com', {
             method: 'post',
-            mode: "no-cors",
+            mode: "cors",
             headers: {
                 "Access-Control-Allow-Origin": 
                 "https://sheltered-river-39504.herokuapp.com/signin",

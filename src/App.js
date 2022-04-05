@@ -159,7 +159,7 @@ loadUser = (data) => {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input })
     fetch('https://sheltered-river-39504.herokuapp.com/imageurl', {
-      mode: "no-cors",
+      mode: "cors",
       method: 'post',
       headers: {
         "Access-Control-Allow-Origin": 
@@ -175,7 +175,7 @@ loadUser = (data) => {
       console.log('There is a problem:', response)
       if (response) {
         fetch('https://sheltered-river-39504.herokuapp.com/image', {
-          mode: "no-cors",
+          mode: "cors",
           method: 'put',
           headers: {
             "Access-Control-Allow-Origin": 
