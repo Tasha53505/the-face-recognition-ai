@@ -30,7 +30,7 @@ class Register extends React.Component   {
             mode: 'cors',
             headers : { 
                 "Access-Control-Allow-Origin": 
-                "no-cors",
+                "https://sheltered-river-39504.herokuapp.com/register",
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
                },
