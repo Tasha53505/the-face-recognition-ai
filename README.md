@@ -4,6 +4,6 @@ This project was part of a UDEMY course where it has the ability to recognise fa
 - Postgres/SQL, 
 - React, 
 - Packages, 
-- -Heroku, 
+- Heroku, 
 - Bash 
 - and JavaScript.
